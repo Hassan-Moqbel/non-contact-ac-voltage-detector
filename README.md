@@ -83,7 +83,7 @@ The sensitivity of the checker is directly proportional to the surface area of t
 2. **To decrease sensitivity** (e.g., isolating a single wire in a dense bundle without false triggering), shorten the antenna probe to a tiny straight tip.
 
 ## Authentic Media Catalog
-- **Engineering Report**: [`docs/A non-contact_AC_line_checkerحسن+موسى.pdf`](docs/)
+- **Engineering Report**: [`docs/Non_Contact_AC_Voltage_Detector_Report.pdf`](docs/)
 - **Original Schematics & Prototype Evidence**: Located in [`media/photos/`](media/photos/) as **[ORIGINAL HARDWARE & SCHEMATIC ARTIFACTS]**.
 - **Demonstration Video**: Available in [`media/videos/`](media/videos/) as **[ORIGINAL SENSING TEST VIDEO]**.
 
