@@ -39,9 +39,9 @@ $$I_{disp} = C_{air} \frac{dV_{ac}}{dt} = 2\pi f C_{air} V_{peak} \cos(2\pi f t)
 *(This equation demonstrates why higher grid frequencies or sharper transient spikes induce higher displacement currents, increasing sensitivity).*
 
 ### 2. Cascaded Multi-stage Darlington Current Gain
-Because $I_{disp}$ is in the pico-ampere range, a single transistor cannot drive an LED. By cascading three transistors, the total current gain ($\beta_{total}$) becomes the product of individual gains:
+Because $I_{disp}$is in the pico-ampere range, a single transistor cannot drive an LED. By cascading three transistors, the total current gain ($\beta_{total}$) becomes the product of individual gains:
 $$\beta_{total} \approx \beta_1 \cdot \beta_2 \cdot \beta_3$$
-Assuming $\beta \approx 100$ for a standard BC547, the total gain approaches $1,000,000$. The final collector current is:
+Assuming $\beta \approx 100$for a standard BC547, the total gain approaches$1,000,000$. The final collector current is:
 $$I_C = \beta_{total} \cdot I_{disp}$$
 *(This amplifies the pico-ampere capacitive currents into milli-amperes to drive the indicators).*
 
