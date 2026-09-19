@@ -1,4 +1,4 @@
-# P12: Non-Contact AC Line Checker
+﻿# Non-Contact AC Line Checker
 
 ![Instrumentation & Sensors](https://img.shields.io/badge/Domain-Instrumentation_%26_Sensors-FF6F00?style=for-the-badge)
 ![Capacitive Field Sensing](https://img.shields.io/badge/Topology-Capacitive_Sensing-009999?style=for-the-badge)
