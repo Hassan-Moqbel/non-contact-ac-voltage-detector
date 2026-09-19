@@ -34,20 +34,38 @@ flowchart LR
 ## Theoretical & Mathematical Models
 
 ### 1. Capacitive Coupling & Displacement Current Formulation
-The antenna acts as one plate of a capacitor, with the live AC wire acting as the other, separated by an air/insulation dielectric ($C_{air}$). The alternating voltage ($V_{ac}$) induces a displacement current ($I_{disp}$) into the antenna:
-$$I_{disp} = C_{air} \frac{dV_{ac}}{dt} = 2\pi f C_{air} V_{peak} \cos(2\pi f t)$$
+
+The antenna acts as one plate of a capacitor, with the live AC wire acting as the other, separated by an air/insulation dielectric ($C_{\text{air}}$). The alternating voltage ($V_{\text{ac}}$) induces a displacement current ($I_{\text{disp}}$) into the antenna:
+
+$$
+I_{\text{disp}} = C_{\text{air}} \frac{dV_{\text{ac}}}{dt} = 2\pi f C_{\text{air}} V_{\text{peak}} \cos(2\pi f t)
+$$
+
 *(This equation demonstrates why higher grid frequencies or sharper transient spikes induce higher displacement currents, increasing sensitivity).*
 
 ### 2. Cascaded Multi-stage Darlington Current Gain
-Because $I_{disp}$is in the pico-ampere range, a single transistor cannot drive an LED. By cascading three transistors, the total current gain ($\beta_{total}$) becomes the product of individual gains:
-$$\beta_{total} \approx \beta_1 \cdot \beta_2 \cdot \beta_3$$
-Assuming $\beta \approx 100$for a standard BC547, the total gain approaches$1,000,000$. The final collector current is:
-$$I_C = \beta_{total} \cdot I_{disp}$$
+
+Because $I_{\text{disp}}$ is in the pico-ampere range, a single transistor cannot drive an LED. By cascading three transistors, the total current gain ($\beta_{\text{total}}$) becomes the product of individual gains:
+
+$$
+\beta_{\text{total}} \approx \beta_1 \cdot \beta_2 \cdot \beta_3
+$$
+
+Assuming $\beta \approx 100$ for a standard BC547, the total theoretical gain approaches $10^6$ ($1{,}000{,}000\times$). The final collector current is:
+
+$$
+I_C = \beta_{\text{total}} \cdot I_{\text{disp}}
+$$
+
 *(This amplifies the pico-ampere capacitive currents into milli-amperes to drive the indicators).*
 
 ### 3. Base-Emitter Threshold Turn-on Constraint
+
 For the Darlington array to conduct, the induced voltage must overcome the sum of all three base-emitter junction drops:
-$$V_{trigger} \ge V_{BE1} + V_{BE2} + V_{BE3} \approx 3 \times 0.65\text{V} \approx 1.95\text{V}$$
+
+$$
+V_{\text{trigger}} \ge V_{BE1} + V_{BE2} + V_{BE3} \approx 3 \times 0.65\text{ V} \approx 1.95\text{ V}
+$$
 
 ## Hardware Bill of Materials (BOM)
 | Component | Specification / Function |
